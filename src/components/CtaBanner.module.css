@@ -1,0 +1,157 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  margin-top: 60px; /* Separation from previous section */
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  /* Very subtle, slow scale for cinematic feel without hover requirement */
+  animation: slowZoom 30s linear infinite alternate;
+}
+
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 8, 8, 0.4) 0%,
+    rgba(8, 8, 8, 0.7) 50%,
+    rgba(8, 8, 8, 0.95) 100%
+  );
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  animation: fadeInUp 1.5s ease forwards 0.2s;
+  opacity: 0;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.heading {
+  font-family: var(--font-playfair);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.description {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 48px;
+  font-weight: 300;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button overrides for this section */
+.actions :global(.btn-primary) {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 36px;
+}
+
+.arrow {
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+.actions :global(.btn-primary:hover) .arrow {
+  transform: translateX(4px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    min-height: 60vh;
+    margin-top: 0;
+  }
+  .container {
+    padding: 80px 20px;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .actions a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 8, 8, 0.6) 0%,
+      rgba(8, 8, 8, 0.8) 50%,
+      rgba(8, 8, 8, 0.95) 100%
+    );
+  }
+}
