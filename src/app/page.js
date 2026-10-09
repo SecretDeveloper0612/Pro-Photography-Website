@@ -26,7 +26,9 @@ export default function Home() {
         </Suspense>
         <CtaBanner />
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </>
   );
 }
