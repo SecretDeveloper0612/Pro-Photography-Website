@@ -91,7 +91,6 @@ export default function Categories() {
                   <div className={styles.content}>
                     <h3 className={styles.title}>{category.title}</h3>
                     <p className={styles.description}>{category.description}</p>
-                    <span className={styles.exploreLink}>Explore Category <span className={styles.arrow}>→</span></span>
                   </div>
                 </div>
               </div>

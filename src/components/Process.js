@@ -8,28 +8,28 @@ const steps = [
     headline: 'First, We Listen.',
     title: 'Consultation',
     description: 'We discuss your project, understand your preferred aesthetic, and recommend the best approach to bring your vision to life.',
-    image: '/portfolio-1.jpg'
+    image: '/image1.png'
   },
   {
     number: '02',
     headline: 'Every Detail Matters.',
     title: 'Creative Planning',
     description: 'Transforming the initial concept into a clear photography plan, including locations, lighting, composition, and styling.',
-    image: '/hero-bg.jpg'
+    image: '/image 2.png'
   },
   {
     number: '03',
     headline: 'Bring the Vision to Life.',
     title: 'The Photoshoot',
     description: 'Capturing authentic moments and compelling compositions using professional equipment and thoughtful creative direction.',
-    image: '/portfolio-1.jpg'
+    image: '/image 3.png'
   },
   {
     number: '04',
     headline: 'Crafted to Be Remembered.',
     title: 'Editing & Delivery',
     description: 'Carefully refining the best photographs with professional color correction and retouching for a consistent, polished result.',
-    image: '/hero-bg.jpg'
+    image: '/image 4.png'
   }
 ];
 

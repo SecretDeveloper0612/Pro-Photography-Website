@@ -27,7 +27,7 @@ export default function CtaBanner() {
           </p>
           
           <div className={styles.actions}>
-            <Link href="#contact" className="btn-primary">
+            <Link href="/contact" className="btn-primary">
               Book Your Photoshoot <span className={styles.arrow}>→</span>
             </Link>
             <Link href="#portfolio" className="btn-secondary">

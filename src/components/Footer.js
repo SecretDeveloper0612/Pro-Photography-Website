@@ -51,7 +51,7 @@ export default function Footer() {
                 <li><Link href="#services">Photography Services</Link></li>
                 <li><Link href="#about">About the Photographer</Link></li>
                 <li><Link href="#process">Our Creative Process</Link></li>
-                <li><Link href="#contact">Contact & Booking</Link></li>
+                <li><Link href="/contact">Contact & Booking</Link></li>
               </ul>
             </div>
 

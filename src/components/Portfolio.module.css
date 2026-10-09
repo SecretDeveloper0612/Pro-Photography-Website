@@ -91,7 +91,7 @@
   gap: 40px;
   width: max-content;
   /* Hardware accelerated animation */
-  animation: scroll 40s linear infinite;
+  animation: scroll 120s linear infinite;
 }
 
 /* Pause animation on hover */

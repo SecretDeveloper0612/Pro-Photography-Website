@@ -5,48 +5,19 @@ import Image from 'next/image';
 import styles from './Portfolio.module.css';
 
 const portfolioData = [
-  {
-    id: 1,
-    title: 'Midnight Elegance',
-    category: 'Fashion Editorial',
-    src: '/portfolio-1.jpg',
-    aspectRatio: '3/4',
-  },
-  {
-    id: 2,
-    title: 'The Grand Entrance',
-    category: 'Wedding',
-    src: '/hero-bg.jpg',
-    aspectRatio: '16/9',
-  },
-  {
-    id: 3,
-    title: 'Urban Shadows',
-    category: 'Portraiture',
-    src: '/portfolio-1.jpg',
-    aspectRatio: '3/4',
-  },
-  {
-    id: 4,
-    title: 'Silent Whispers',
-    category: 'Lifestyle',
-    src: '/hero-bg.jpg',
-    aspectRatio: '16/9',
-  },
-  {
-    id: 5,
-    title: 'Golden Hour',
-    category: 'Fashion Editorial',
-    src: '/portfolio-1.jpg',
-    aspectRatio: '3/4',
-  },
-  {
-    id: 6,
-    title: 'Ethereal Bond',
-    category: 'Wedding',
-    src: '/hero-bg.jpg',
-    aspectRatio: '16/9',
-  },
+  { id: 1, title: 'Midnight Elegance', category: 'Fashion Editorial', src: '/Page/R5II7751.jpg', aspectRatio: '3/4' },
+  { id: 2, title: 'The Grand Entrance', category: 'Wedding', src: '/Page/_DSC1190.jpg', aspectRatio: '16/9' },
+  { id: 3, title: 'Urban Shadows', category: 'Portraiture', src: '/Page/A7400206.JPG', aspectRatio: '3/4' },
+  { id: 4, title: 'Silent Whispers', category: 'Lifestyle', src: '/Page/A7400451.JPG', aspectRatio: '16/9' },
+  { id: 5, title: 'Golden Hour', category: 'Fashion Editorial', src: '/Page/A7402873.JPG', aspectRatio: '3/4' },
+  { id: 6, title: 'Ethereal Bond', category: 'Wedding', src: '/Page/A7404917.jpg', aspectRatio: '16/9' },
+  { id: 7, title: 'Timeless Beauty', category: 'Portraiture', src: '/Page/A7405724.JPG', aspectRatio: '3/4' },
+  { id: 8, title: 'Nature\'s Canvas', category: 'Landscape', src: '/Page/A7409283.jpg', aspectRatio: '16/9' },
+  { id: 9, title: 'Classic Romance', category: 'Wedding', src: '/Page/IMG_0060.JPG', aspectRatio: '3/4' },
+  { id: 10, title: 'City Lights', category: 'Urban', src: '/Page/IMG_0173.JPG', aspectRatio: '16/9' },
+  { id: 11, title: 'Abstract Visions', category: 'Creative', src: '/Page/IMG_1370.JPG', aspectRatio: '3/4' },
+  { id: 12, title: 'Quiet Moments', category: 'Lifestyle', src: '/Page/IMG_3496.JPG', aspectRatio: '16/9' },
+  { id: 13, title: 'Bold & Beautiful', category: 'Fashion', src: '/Page/IMG_4145.JPG', aspectRatio: '3/4' },
 ];
 
 export default function Portfolio() {
