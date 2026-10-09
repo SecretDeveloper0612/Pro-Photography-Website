@@ -7,7 +7,7 @@ export default function CtaBanner() {
     <section className={styles.section}>
       <div className={styles.background}>
         <Image 
-          src="/hero-bg.jpg" 
+          src="/Page/IMG_0170.JPG" 
           alt="Cinematic Photography Moment" 
           fill
           className={styles.image}

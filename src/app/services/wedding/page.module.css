@@ -1,0 +1,208 @@
+/* page.module.css */
+.pageWrapper {
+  background-color: var(--bg-primary, #0a0a0a);
+  color: var(--text-primary, #ffffff);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.05);
+  animation: slowZoom 20s ease-out infinite alternate;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.2) 0%,
+    rgba(10, 10, 10, 0.6) 70%,
+    rgba(10, 10, 10, 1) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding: 0 40px;
+  margin-top: 10vh;
+}
+
+.heroEyebrow {
+  font-size: 13px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--accent-gold, #c8a96b);
+  margin-bottom: 32px;
+  display: block;
+  animation: fadeInDown 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.heroTitle {
+  font-size: clamp(48px, 8vw, 120px);
+  line-height: 1.05;
+  font-weight: 300;
+  margin-bottom: 40px;
+  letter-spacing: -0.03em;
+  animation: fadeInUp 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.2s;
+  opacity: 0;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.heroDescription {
+  font-size: clamp(16px, 2vw, 22px);
+  color: var(--text-secondary, #a0a0a0);
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+  font-weight: 300;
+  animation: fadeInUp 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.4s;
+  opacity: 0;
+}
+
+/* Editorial Section */
+.editorialSection {
+  padding: 160px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.editorialRow {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 200px;
+}
+
+.editorialRow.reverse {
+  flex-direction: row-reverse;
+}
+
+.editorialImageWrapper {
+  flex: 1.2;
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.editorialImage {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.editorialImageWrapper:hover .editorialImage {
+  transform: scale(1.05);
+}
+
+.editorialContent {
+  flex: 1;
+  padding: 40px 0;
+}
+
+.editorialContent h2 {
+  font-size: clamp(36px, 4vw, 64px);
+  line-height: 1.1;
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.editorialContent p {
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+/* Gallery Grid */
+.masonryGallery {
+  padding: 0 40px 160px;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  grid-auto-rows: 250px;
+}
+
+.masonryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.masonryItem img {
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.8s ease;
+  filter: brightness(0.85);
+}
+
+.masonryItem:hover img {
+  transform: scale(1.04);
+  filter: brightness(1);
+}
+
+.item1 { grid-column: span 8; grid-row: span 3; }
+.item2 { grid-column: span 4; grid-row: span 2; }
+.item3 { grid-column: span 4; grid-row: span 2; }
+.item4 { grid-column: span 6; grid-row: span 3; }
+.item5 { grid-column: span 6; grid-row: span 2; }
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .editorialRow, .editorialRow.reverse {
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 120px;
+  }
+  .editorialImageWrapper {
+    width: 100%;
+  }
+  .editorialContent {
+    padding: 0;
+  }
+  .masonryGallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .masonryItem {
+    height: 60vh;
+  }
+}
